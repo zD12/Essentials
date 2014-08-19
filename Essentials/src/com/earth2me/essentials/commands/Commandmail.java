@@ -89,7 +89,7 @@ public class Commandmail extends EssentialsCommand
 			user.sendMessage(mail);
 			return;
 		}
-		if (args.length > 1 && "sendall".equalsIgnoreCase(args[0]))
+/*		if (args.length > 1 && "sendall".equalsIgnoreCase(args[0]))
 		{
 			if (!user.isAuthorized("essentials.mail.sendall"))
 			{
@@ -99,7 +99,7 @@ public class Commandmail extends EssentialsCommand
 			user.sendMessage(tl("mailSent"));
 			return;
 		}
-		if (args.length >= 1 && "clear".equalsIgnoreCase(args[0]))
+*/		if (args.length >= 1 && "clear".equalsIgnoreCase(args[0]))
 		{
 			user.setMails(null);
 			user.sendMessage(tl("mailCleared"));
@@ -130,13 +130,13 @@ public class Commandmail extends EssentialsCommand
 			sender.sendMessage(tl("mailSent"));
 			return;
 		}
-		else if (args.length >= 2 && "sendall".equalsIgnoreCase(args[0]))
+/*		else if (args.length >= 2 && "sendall".equalsIgnoreCase(args[0]))
 		{
 			ess.runTaskAsynchronously(new SendAll(tl("mailFormat", "Server", getFinalArg(args, 1))));
 			sender.sendMessage(tl("mailSent"));
 			return;
 		}
-		else if (args.length >= 2)
+*/		else if (args.length >= 2)
 		{
 			//allow sending from console without "send" argument, since it's the only thing the console can do
 			User u = getPlayer(server, args[0], true, true);
